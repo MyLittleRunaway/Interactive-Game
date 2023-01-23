@@ -1,0 +1,98 @@
+body {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-size: 120%;
+  background-color: #121212;
+  color: #fff700;
+  }
+  
+  a {
+  color: #fffffd;
+  text-decoration: none;
+  transition: color 0.1s;
+  }
+  
+  a:hover {
+  color: #ff0000;
+  }
+  
+  button {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 100%;
+  background-color: #fff700;
+  border-radius: 5px;
+  padding: 2px 10px;
+  color: rgb(0, 0, 0);
+  border: 0;
+  transition: background-color 0.1s;
+  }
+  
+  button:hover {
+  background-color: #000000;
+  color: #fff700;
+  }
+  
+  .choices button {
+  display: block;
+  }
+  
+  input[type="text"] {
+  font-size: 100%;
+  background-color: #1c1c1c;
+  color: #fff;
+  border: none;
+  }
+  
+  ol {
+  padding-left: 0px;
+  max-height: 400px;
+  overflow: auto;
+  }
+  
+  li {
+  padding: 5px;
+  list-style: decimal inside none;
+  }
+  
+  li:nth-child(odd) {
+  background-color: #fff700;
+  color: #000000;
+  }
+  
+  .wrapper {
+  margin: 100px auto 0 auto;
+  max-width: 600px;
+  }
+  
+  .hide {
+  display: none;
+  }
+  
+  .start {
+  text-align: center;
+  }
+  
+  .scores {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  }
+  
+  .feedback {
+  font-style: italic;
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 10px;
+  color: rgb(255, 0, 0);
+  border-top: 2px solid #ccc;
+  }
+  
+  .timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  }
+
