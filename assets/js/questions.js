@@ -30,11 +30,6 @@ const questions = [
         answer: "'==' checks for value equality and '===' checks for value and type equality"
     },
     {
-        title: "What is the difference between for-loop and forEach in JavaScript?",
-        choices: ["for-loop is used for iterating through an array and forEach is used for iterating through an object", "forEach is used for iterating through an array and for-loop is used for iterating through an object", "for-loop and forEach both can be used for iterating through an array", "There is no difference, they can be used interchangeably"],
-        answer: "for-loop is used for iterating through an array and forEach is used for iterating through an array"
-    },
-    {
         title: "What is closure in JavaScript?",
         choices: ["A closure is an inner function that has access to the variables in the outer function's scope", "A closure is a function that returns another function", "A closure is a function that returns an object", "A closure is a function that can access global variables"],
         answer: "A closure is an inner function that has access to the variables in the outer function's scope"
