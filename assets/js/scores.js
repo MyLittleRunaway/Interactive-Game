@@ -2,20 +2,33 @@
 const highscoresList = document.getElementById("highscores");
 const clear = document.getElementById("clear");
 
-// Loop through the localStorage and create a list item for each high score
+// Create an empty array to store the high scores
+let highscores = [];
+
+// Loop through the localStorage and push each high score to the array
 for (let i = 0; i < localStorage.length; i++) {
     // Get the key and value from the localStorage
     let initials = localStorage.key(i);
     if (initials != 'loglevel') {
         let score = localStorage.getItem(initials);
-        let listItem = document.createElement("li");
-        listItem.textContent = initials + " - " + score;
-        highscoresList.appendChild(listItem);
+        highscores.push({initials: initials, score: score});
     }
 }
 
+// Sort the highscores by score
+highscores.sort((a, b) => {
+    return a.score - b.score;
+});
+
+// Loop through the sorted highscores and create a list item for each
+for (let i = 0; i < highscores.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.textContent = highscores[i].initials + " - " + highscores[i].score;
+    highscoresList.appendChild(listItem);
+}
+
 // Check if there are no high scores
-if(localStorage.length === 0){
+if(highscores.length === 0){
     highscoresList.textContent = "No high scores to display.";
 }
 
@@ -23,7 +36,6 @@ if(localStorage.length === 0){
 if(localStorage === undefined || localStorage === null){
     highscoresList.textContent = "Local storage not accessible, please check browser settings.";
 }
-
 
 // Clear the highscores
 clear.addEventListener("click", function() {
